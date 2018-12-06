@@ -1,0 +1,9 @@
+{
+  "databasetype": "mssql",
+  "database": {
+    "host": "localhost",
+    "password": "1433"
+  },
+  "host": "localhost",
+  "port": "8080"
+}
