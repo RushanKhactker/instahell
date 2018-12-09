@@ -1,11 +1,10 @@
-package utils
+package db
 
 import (
 	"fmt"
 	"testing"
+	"time"
 )
-
-
 
 // ну вот нравиться мне адову тьму писать потому пусть падает по приказу!
 const DOTESTFAIL = false
@@ -16,12 +15,14 @@ func Test_(t *testing.T) {if DOTESTFAIL {t.Error("Йя уронил этот т�
 
 // ------------- и да будет тест тут
 
-func Test_tst(t *testing.T) {
-	var x = MSSQL
-	var y = MYSQL
-	if x != "mssql" || y != "mysql" {
-		t.Error("Пиздец что вы натворили")
-	}
+func Test_z(t *testing.T) {
+	l := Log {}
+	l.Date = time.Now().String()
+
+}
+
+func TestConnect(t *testing.T) {
+	Connect()
 }
 
 // ------------- и да завершиться тест тут
@@ -29,4 +30,3 @@ func Test_tst(t *testing.T) {
 // ниже тоже поебень
 func Test_0z(t *testing.T) {fmt.Print("============== Это ручкой трактора конец \n")}
 
-}

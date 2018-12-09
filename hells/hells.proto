@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+// protoc --go_out=plugins=grpc:. *.proto
+
+package hells;
+
+message HellsId {
+  string Id = 1;
+}
+
+message Nothing {
+  bool dummy = 1;
+}
+
+service HellMaker {
+    rpc Make (Nothing) returns (HellsId) {}
+}
+
